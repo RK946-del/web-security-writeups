@@ -7,6 +7,9 @@ The application assumes users will only access their own transcript files throug
 WHY THIS IS DANGEROUS:
 An attacker can enumerate predictable filenames (e.g., 1.txt, 2.txt, 3.txt) and directly request them via HTTP, allowing unauthorized access to other users' chat transcripts,files(images,pdf,reports etc) and sensitive information such as passwords.
 
+DATA FLOW:
+client->trasncript request->chats-> server-> 302 found/redirect-> client
+
 EXPLOITATION STEPS:
 1) visit the chat section start to chat.click view transcript
 2) intercept the transcript request,observer the response gives 302 found with location url

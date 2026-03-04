@@ -7,6 +7,9 @@ user supplied 'id' wont be tampered and object ownership check is unneccessary.
 WHY THIS IS DANGEROUS:
 attacker can intercept the request and change user control 'id' parameter to retrive other accounts data.
 
+DATA FLOW:
+client->client-controlled-id(query-param/POST body)->server->retrive data from database->server->client
+
 EXPLOITATION STEPS:
 1) Log in as a normal user(to become authenticated).visit my-account path intercept it.
 2) change id=yourid to id=administrator 
