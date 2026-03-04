@@ -12,3 +12,6 @@ EXPLOITATION STEPS:
 2) change id=yourid to id=administrator 
 3) response:
     200 ok-> logged in
+
+
+postswigger lab: https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-password-disclosure
